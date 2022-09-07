@@ -13,10 +13,15 @@ The starter code for this activity is provided in the ```fetchData.jsx``` file.
 In the first step of this activity, your task is to implement the fetchData method inside the useDataApi component, allowing it to get data from a remote source.
 
 The ```fetchData``` ```async``` method dispatches the following actions:
+
 ```FETCH_INIT```: This is dispatched when ```fetchData``` is called
+
 ```FETCH_SUCCESS```: This is dispatched when the ```axios``` call is successful
+
 ```FETCH_FAILURE```: This is dispatched when the ```axios``` call has failed
+
 Note: These actions can be found in the ```dataFetchReducer``` reducer.
+
 Make use of the bootstrap ```list-group``` and ```list-group-item``` ```className``` to style the list of articles returned by the data source. For reference, the formatting should match the following: Note: This activity does not include the search feature shown in the course video and screenshot.
 screenshot
 
@@ -31,17 +36,27 @@ Your task in this step is to implement the ```Pagination``` component that rende
 The ```Pagination``` component has the following destructured props (these are already set):
 
 ```items```: This is an array containing all articles
+
 ```pageSize```: This is the desired page size representing the number of articles per page
+
 ```onPageChange```: This is the event that is triggered when a page is selected
+
 To implement the ```Pagination component```, complete the following:
 
 If there is one ```item``` or less, the component should ```return null```
+
 Calculate the number of pages based on the ```pageSize``` and ```items.length``` variables
+
 Create a variable named ```pages``` using the ```range``` function, the ```range``` function should use the data from the previous step. This should result in an array of numbers that represents the number of pages
+
 Use the ```pages``` array to create a new array called ```list```. ```list``` should be an array of buttons. The button should have the following properties:
+
 The ```className``` should be ```page-item```
+
 A ```key```
+
 A ```onClick``` event
+
 The ```Pagination``` component should return the list of all buttons inside an unordered list ```<ul></ul>```. The unordered list should also be wrapped within a ```<nav>```tag
 
 Note: Use the following to have access the ```<Button>``` component: ```const { Button } = ReactBootstrap```;
